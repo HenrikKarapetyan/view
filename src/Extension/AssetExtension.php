@@ -135,6 +135,6 @@ final class AssetExtension implements ExtensionInterface
      */
     public function linkAsset(string $file): string
     {
-        return $this->basePath . '/' . ltrim($file, '/');
+        return $this->baseUrl . '/' . ltrim($file, '/');
     }
 }
