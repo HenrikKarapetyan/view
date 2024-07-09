@@ -36,6 +36,60 @@ final class AssetExtension implements ExtensionInterface
     }
 
     /**
+     * @return string
+     */
+    public function getBasePath(): string
+    {
+        return $this->basePath;
+    }
+
+    /**
+     * @param string $basePath
+     *
+     * @return void
+     */
+    public function setBasePath(string $basePath): void
+    {
+        $this->basePath = $basePath;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBaseUrl(): string
+    {
+        return $this->baseUrl;
+    }
+
+    /**
+     * @param string $baseUrl
+     *
+     * @return void
+     */
+    public function setBaseUrl(string $baseUrl): void
+    {
+        $this->baseUrl = $baseUrl;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isAppendTimestamp(): bool
+    {
+        return $this->appendTimestamp;
+    }
+
+    /**
+     * @param bool $appendTimestamp
+     *
+     * @return void
+     */
+    public function setAppendTimestamp(bool $appendTimestamp): void
+    {
+        $this->appendTimestamp = $appendTimestamp;
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getFunctions(): array
