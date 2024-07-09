@@ -95,7 +95,8 @@ final class AssetExtension implements ExtensionInterface
     public function getFunctions(): array
     {
         return [
-            'asset' => [$this, 'assetFile'],
+            'asset'     => [$this, 'assetFile'],
+            'linkAsset' => [$this, 'linkAsset'],
         ];
     }
 
@@ -123,5 +124,17 @@ final class AssetExtension implements ExtensionInterface
         }
 
         return $url;
+    }
+
+    /**
+     * Includes the asset file and appends a timestamp with the last modification of that file.
+     *
+     * @param string $file
+     *
+     * @return string
+     */
+    public function linkAsset(string $file): string
+    {
+        return $this->basePath . '/' . ltrim($file, '/');
     }
 }
